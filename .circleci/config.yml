@@ -18,5 +18,6 @@ workflows:
       - docker/publish:
           name: Build and Publish to Docker Hub
           image: thinxcloud/base
+          tag: latest
           context:
             - dockerhub
