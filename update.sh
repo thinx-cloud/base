@@ -3,8 +3,12 @@
 # expected usage:
 # ./update.sh --owner suculent
 
+export TAG=1.$(git rev-list head --count)
+
 export OWNER="thinxcloud"
 
-docker build -t $OWNER/base .
+echo "Will update image with current commit count tag ${TAG}"
 
-docker push $OWNER/base
+docker build -t $OWNER/base:$TAG .
+
+docker push $OWNER/base:$TAG
