@@ -52,7 +52,6 @@
     "mailgun.js": "*",
     "md5": "^2.3.0",
     "mkdirp": "^1.0.4",
-    "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "mqtt": "^4.2.8",
     "nano": "^9.0.4",
@@ -101,6 +100,7 @@
     "mem": "4.0.0",
     "minimatch": "3.0.4",
     "minimist": "1.2.3",
+    "moment": "2.29.1",
     "tunnel-agent": "0.6.0",
     "yargs-parser": "18.1.1"
   },
