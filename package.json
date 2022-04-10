@@ -14,7 +14,8 @@
   "scripts": {
     "sonar": "./scripts/99-sonar.sh",
     "snyk": "snyk test",
-    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect",
     "test": "nyc jasmine; nyc report --reporter=text-lcov > lcov.info && cat lcov.info | coveralls",
     "coverage": "npm run mocha",
     "mocha": "mocha spec/jasmine --delay=3000 --exit --timeout=5000; nyc report --reporter=text-lcov > lcov.info && cat lcov.info | coveralls",
@@ -76,7 +77,7 @@
     "sillyname": "^0.1.0",
     "simple-oauth2": "^2.5.2",
     "slack-notify": "^0.1.7",
-    "snyk": "^1.842.0",
+    "@snyk/protect": "^1.657.0",
     "socket.io": "^3.0.4",
     "sqreen": "^1.64.2",
     "ssh-fingerprint": "0.0.1",
