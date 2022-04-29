@@ -1,4 +1,4 @@
-FROM node:16-bullseye-slim
+FROM node:16.14.2-bullseye-slim
 
 LABEL maintainer="Matej Sychra <suculent@me.com>"
 
