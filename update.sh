@@ -11,4 +11,4 @@ echo "Will update image with current commit count tag ${TAG}"
 
 docker build -t $OWNER/base:$TAG .
 
-docker push $OWNER/base:$TAG
+docker push $OWNER/base:alpine

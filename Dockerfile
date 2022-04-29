@@ -1,35 +1,37 @@
-FROM node:17.9-slim
+FROM node:18-alpine
 
 LABEL maintainer="Matej Sychra <suculent@me.com>"
 
 RUN adduser --system --disabled-password --shell /bin/bash thinx
 
 # WHY? See blame.
-RUN sh -c "echo 'Dir::Ignore-Files-Silently:: \"(.save|.distupgrade)$\";' > /etc/apt/apt.conf.d/99ignoresave"
+# RUN sh -c "echo 'Dir::Ignore-Files-Silently:: \"(.save|.distupgrade)$\";' > /etc/apt/apt.conf.d/99ignoresave"
 
 # Packages
 
-RUN apt-get update -qq && \
-    apt-get install -qq -y --fix-missing --no-install-recommends \
-    apt-transport-https \
-    apt-utils \
-    btrfs-progs \
-    ca-certificates \
-    curl \
-    e2fsprogs \
-    gnutls-bin \
-    iptables \
-    lxc \
-    pigz \
-    python \
-    openssh-client \
-    xfsprogs \
-    xz-utils \
-    net-tools \
-    git \
-    jq \
-    zip \
-    && rm -rf /var/lib/apt/lists/*
+APK add git jq zip curl
+
+# RUN apt-get update -qq && \
+#     apt-get install -qq -y --fix-missing --no-install-recommends \
+#     apt-transport-https \
+#     apt-utils \
+#     btrfs-progs \
+#     ca-certificates \
+#     curl \
+#     e2fsprogs \
+#     gnutls-bin \
+#     iptables \
+#     lxc \
+#     pigz \
+#     python \
+#     openssh-client \
+#     xfsprogs \
+#     xz-utils \
+#     net-tools \
+#     git \
+#     jq \
+#     zip \
+#     && rm -rf /var/lib/apt/lists/*
 
 # Docker
 
@@ -49,7 +51,3 @@ WORKDIR /opt/thinx/thinx-device-api
 
 COPY ./package.json ./
 COPY .snyk ./.snyk
-
-# Install latest npm
-
-# RUN npm install -g npm@8.5.5
