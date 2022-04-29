@@ -9,7 +9,7 @@ LABEL maintainer="Matej Sychra <suculent@me.com>"
 
 # Packages
 
-RUN apk add git jq zip curl
+RUN apk add git jq zip curl openssh
 
 # RUN apt-get update -qq && \
 #     apt-get install -qq -y --fix-missing --no-install-recommends \
