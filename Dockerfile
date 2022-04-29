@@ -2,14 +2,14 @@ FROM node:18-alpine
 
 LABEL maintainer="Matej Sychra <suculent@me.com>"
 
-RUN adduser --system --disabled-password --shell /bin/bash thinx
+# RUN adduser --system --disabled-password --shell /bin/bash thinx
 
 # WHY? See blame.
 # RUN sh -c "echo 'Dir::Ignore-Files-Silently:: \"(.save|.distupgrade)$\";' > /etc/apt/apt.conf.d/99ignoresave"
 
 # Packages
 
-APK add git jq zip curl
+RUN apk add git jq zip curl
 
 # RUN apt-get update -qq && \
 #     apt-get install -qq -y --fix-missing --no-install-recommends \
@@ -51,3 +51,5 @@ WORKDIR /opt/thinx/thinx-device-api
 
 COPY ./package.json ./
 COPY .snyk ./.snyk
+
+# USER 1000:1000
