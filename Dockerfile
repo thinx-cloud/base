@@ -1,4 +1,4 @@
-FROM node:17.9-slim
+FROM node:18-slim
 
 LABEL maintainer="Matej Sychra <suculent@me.com>"
 
@@ -13,17 +13,13 @@ RUN apt-get update -qq && \
     apt-get install -qq -y --fix-missing --no-install-recommends \
     apt-transport-https \
     apt-utils \
-    btrfs-progs \
     ca-certificates \
     curl \
-    e2fsprogs \
     gnutls-bin \
     iptables \
     lxc \
     pigz \
-    python \
     openssh-client \
-    xfsprogs \
     xz-utils \
     net-tools \
     git \
