@@ -4,34 +4,9 @@ LABEL maintainer="Matej Sychra <suculent@me.com>"
 
 # RUN adduser --system --disabled-password --shell /bin/bash thinx
 
-# WHY? See blame.
-# RUN sh -c "echo 'Dir::Ignore-Files-Silently:: \"(.save|.distupgrade)$\";' > /etc/apt/apt.conf.d/99ignoresave"
-
 # Packages
 
 RUN apk add --update --no-cache openssh git jq zip curl openssh
-
-# RUN apt-get update -qq && \
-#     apt-get install -qq -y --fix-missing --no-install-recommends \
-#     apt-transport-https \
-#     apt-utils \
-#     btrfs-progs \
-#     ca-certificates \
-#     curl \
-#     e2fsprogs \
-#     gnutls-bin \
-#     iptables \
-#     lxc \
-#     pigz \
-#     python \
-#     openssh-client \
-#     xfsprogs \
-#     xz-utils \
-#     net-tools \
-#     git \
-#     jq \
-#     zip \
-#     && rm -rf /var/lib/apt/lists/*
 
 # Docker
 

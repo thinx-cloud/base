@@ -1,7 +1,7 @@
 {
   "name": "thinx-base",
-  "version": "1.5.743",
-  "description": "THiNX IoT Device Management API",
+  "version": "1.5.1871",
+  "description": "THiNX IoT Device Management API Base Image",
   "bugs": {
     "url": "https://github.com/suculent/thinx-device-api/issues"
   },
@@ -12,7 +12,6 @@
     "url": "git://github.com/suculent/thinx-device-api.git"
   },
   "scripts": {
-    "sonar": "./scripts/99-sonar.sh",
     "snyk": "snyk test",
     "prepare": "npm run snyk-protect",
     "snyk-protect": "snyk-protect",
