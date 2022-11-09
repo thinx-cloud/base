@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:19.0-alpine
 
 LABEL maintainer="Matej Sychra <suculent@me.com>"
 
