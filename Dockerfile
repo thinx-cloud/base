@@ -6,7 +6,7 @@ LABEL maintainer="Matej Sychra <suculent@me.com>"
 
 # Packages
 
-RUN apk add --update --no-cache openssh git jq zip curl openssh
+RUN apk add --update --no-cache openssh-client git jq zip curl
 
 # Docker
 
