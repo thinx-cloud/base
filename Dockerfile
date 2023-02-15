@@ -8,7 +8,7 @@ LABEL maintainer="Matej Sychra <suculent@me.com>"
 
 RUN apk add --update --no-cache openssh-client git jq zip curl
 
-# Docker
+# Docker (TODO: Update to 20.10.21)
 
 ENV VER="20.10.12"
 RUN curl -sL -o /tmp/docker-$VER.tgz https://download.docker.com/linux/static/stable/x86_64/docker-$VER.tgz && \
