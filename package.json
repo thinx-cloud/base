@@ -5,7 +5,7 @@
   "bugs": {
     "url": "https://github.com/suculent/thinx-device-api/issues"
   },
-  "license": "ISC",
+  "license": "gpl-2.0",
   "author": "Matej Sychra",
   "repository": {
     "type": "git",
